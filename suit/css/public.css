@@ -1,0 +1,527 @@
+@charset "utf-8";
+/** public style **/
+/* animation */
+@keyframes navhid{
+	from{right:0;}
+	to{right:-160px;}
+}
+@keyframes navshow{
+	from{right:-160px;}
+	to{right:0;}
+}
+@keyframes bodyhid{
+	from{right:0;}
+	to{right:160px;}
+}
+@keyframes bodyshow{
+	from{right:160px;}
+	to{right:0;}
+}
+/* reset */
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	font:13px/25px 'Microsoft Yahei','Simsun';	
+}
+li,ol{
+	list-style:none;	
+}
+a{
+	text-decoration:none;
+	color:inherit;
+}
+img{
+	border:none;
+	vertical-align:middle;
+}
+strong,em,b,h1,h2,h3,h4{
+	font-weight:normal;
+	font-style:normal;	
+}
+input{
+	outline:none;
+	vertical-align:middle;	
+}
+.clear{
+	display: block;
+	height:0;
+	clear:both;	
+}
+.relative{
+	position:relative;
+}
+.fixed{
+	position:fixed;
+}
+.none{
+	display:none;	
+}
+.wrapper{
+	width:100%;
+	height:auto;
+}
+.content{
+	width:1200px;
+	height:inherit;
+	margin:0 auto;
+}
+div.mw1000{
+	max-width:1000px;
+}
+/* header */
+.header{
+	width:100%;
+	height:114px;
+	background-color:#000;
+	color:#fff;
+}
+
+.header .logo{
+	float:left;
+	width:18%;
+	height:100%;
+	background:url(../images/logo_bg.png) no-repeat center;	
+}
+.header .logo a{
+	display:block;
+	width:100%;
+	height:100%;
+}
+.header .top{
+	float:left;
+	width:82%;
+	height:30%;
+	text-align:right;
+}
+.header .top a{
+	margin:0.5em;	
+}
+.header .nav{
+	float:left;
+	width:82%;
+	height:70%;
+	font-size:1.15em;
+}
+.header .nav .nav-right{
+	float:right;
+	width:20%;
+	height: 100%;
+	position:relative;
+}
+.header .nav .nav-right .tel{
+	float:left;
+	width:60%;
+	height:100%;
+	text-align:center;
+	background:url("../images/tel_bg.png") 0 1.4em no-repeat;
+	padding-left:5%;
+}
+.header .nav .nav-right .tel strong{
+	display:block;
+	padding-top:1.2em;	
+}
+.header .nav .nav-right .tel span{
+	display:block;	
+}
+.header .nav .nav-right .usr-cart{
+	position:relative;
+	float:left;
+	width:35%;
+	height:100%;	
+}
+.header .nav .nav-right .usr-cart a{
+	display:block;
+	width:100%;
+	height:100%;
+	background:url("../images/cart_bg.png") center center no-repeat;
+}
+.header .nav .nav-right .usr-cart em{
+	font-size:0.9em;
+	position:absolute;
+	width:1.5em;
+	height:1.5em;
+	top:1em;
+	right:1em;
+	line-height:1.5em;
+	text-align:center;
+	background-color:#ce730f;
+	border-radius:0.75em;
+}
+.header .nav .nav-right .nav-menu{
+	display:none;	
+}
+.header .nav .nav-list{
+	float:left;
+	width:70%;
+	padding:2.5em 5% 0;	
+}
+.header .nav .nav-list li{
+	float:left;
+	width:12.5%;
+	text-align:center;
+}
+.header .tel{
+	float:left;
+	width:180px;
+}
+.header .nav-menu{
+	display:none;	
+}
+/* footer */
+.footer{
+	width:100%;
+	height:389px;
+	background-color:#000;
+	color:#fff;
+	clear: both;
+}
+.footer .button{
+	display:block;
+	width:100px;
+	height:22px;
+	line-height:21px;
+	text-align:center;
+	border:1px solid #fff;
+}
+.footer .title{
+	display:block;
+	width:80px;
+	height:50px;
+	font-size:20px;
+	line-height:50px;
+	border-bottom:1px solid #fff;
+}
+.footer .col-1{
+	float:left;
+	width:400px;
+}
+.footer .col-1 .info{
+	width:280px;
+	margin-top:25px;
+	padding:66px 0 20px;
+	background:url(../images/logo_foot_bg.png) no-repeat left top;
+}
+.footer .col-1 .tel{
+	padding-bottom:20px;
+}
+.footer .col-1 .tel em{
+	font-size:16px;
+}
+.footer .col-1 .tel span{
+	margin-top:8px;
+}
+.footer .col-1 .copy{
+	line-height:20px;	
+}
+.footer .col-1 .copy p{
+	margin-bottom:10px;	
+}
+.footer .col-2{
+	float:left;
+	width:240px;
+}
+.footer .col-2 strong{
+	margin:75px 0 20px;
+}
+.footer .col-2 ul{
+	display:block;
+	height:auto	
+}
+.footer .col-2 ul li{
+	height:30px;
+	line-height:30px;
+}
+
+.footer .col-3{
+	float:left;
+	width:360px;
+}
+.footer .col-3 strong{
+	margin:75px 0 20px;
+}
+.footer .col-3 p{
+	width:280px;
+}
+.footer .col-3 span{
+	margin-top:40px;	
+}
+.footer .col-4{
+	float:left;
+	width:200px;
+}
+.footer .col-4 strong{
+	display:block;
+	height:50px;
+	font-size:20px;
+	line-height:50px;
+	margin:75px 0 20px;
+}
+/*适配平板*/
+@media (min-width: 640px) and (max-width: 1024px) {
+	body{
+		font:0.8em/1.5em 'Microsoft Yahei','Simsun';	
+	}
+	.content{
+		width:100%;
+		height:inherit;
+		margin:0 auto;
+		padding:0 1em;
+		box-sizing:border-box;
+	}
+	.header{
+		height:90px;
+	}
+	.header .logo{
+		background-size:95% auto;
+	}
+	.header .nav .nav-right .tel strong{
+		font-size:0.75em;
+		height:1.5em;
+		overflow:hidden;
+	}
+	.header .nav .nav-right .tel span{
+		font-size:0.85em;
+	}
+	.header .nav .nav-list li{
+		font-size:0.85em;
+		height:1.5em;
+		overflow:hidden;
+	}
+	.header .nav .nav-list{
+		width: 80%;
+    	padding: 1.5em 0 0;
+	}
+	
+	.footer .col-1{
+		width:33%;
+		padding-left:2%;
+	}
+	.footer .col-1 .info{
+		width:95%;	
+		padding: 4.8em 0 1em;
+		background-size:auto 4.8em;
+		margin-top: 0.5em;
+	}
+	.footer .col-2{
+		width:20%;
+	}
+	.footer .col-3{
+		width:30%;
+	}
+	.footer .col-3 p{
+		width:90%;	
+	}
+	.footer .col-4{
+		width:15%;
+	}
+	
+}
+/*适配手机*/
+@media (min-width: 320px) and (max-width: 640px) {
+
+	body{
+		font:0.7em/1.5em 'Microsoft Yahei','Simsun';	
+	}
+	.body-hid{
+		position:relative;
+		top:0;
+		right:160px;
+		animation: bodyhid .5s ease;	
+	}
+	.body-show{
+		position:relative;
+		top:0;
+		right:0;
+		animation: bodyshow .5s ease;
+	}
+	.content{
+		width:100%;
+		height:inherit;
+		margin:0 auto;
+	}
+	.header{
+		height:60px;
+	}
+	.header .logo{
+		width:80%;
+		background-size: auto 95%;
+		margin:0 20% 0 5%;
+		background-position:left center;
+	}
+	.header .top{
+		display:none;	
+	}
+	.header .nav{
+		position:fixed;
+		width:160px;
+		height:100%;
+		min-height:20em;
+		top:0;
+		right:-160px;
+		padding:0.5em 1em;
+		background-color:#000;
+		font-size:1.2em;
+		box-sizing:border-box;
+		overflow-y: scroll;
+		z-index:3;
+	}
+	.header .nav .nav-right{
+		float:none;
+		width:100%;
+		height: auto;	
+	}
+	.header .nav .nav-right .tel{
+		float:none;
+		width:75%;
+		height: 3em;
+		padding-left:25%;
+		background:url(../images/tel_bgx2.png) .5em .5em no-repeat;
+		background-size:auto 80%;	
+	}
+	.header .nav .nav-right .tel strong{
+		padding-top:0.2em;
+		font-size:1em;	
+	}
+	.header .nav .nav-right .usr-cart{
+		float:none;
+		width:100%;
+		height:3em;
+		padding-top:1em;	
+	}
+	.header .nav .nav-right .usr-cart a{
+		background:url(../images/cart_bgx2.png) 20% center no-repeat;
+		background-size:auto 95%;
+	}
+	.header .nav .nav-right .usr-cart em{
+		right: 30%;
+		top: 1.5em;
+		line-height: 1.6em;
+	}
+	.header .nav .nav-list{
+		width:100%;
+		padding:1em 0 0 2em;
+		box-sizing:border-box;
+	}
+	.header .nav .nav-list li{
+		float:none;
+		width:100%;
+		height:3em;
+		line-height:3em;	
+		text-align:left;
+	}
+	.header .nav-show{
+		animation: navshow .5s ease;
+		right:0;	
+	}
+	.header .nav-hid{
+		animation: navhid .5s ease;
+		right:-160px;	
+	}
+	.nav-over{
+		position:fixed;
+		z-index:2;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;	
+	}
+	.header .nav-menu{
+		position:absolute;
+		display:block;
+		top:0;
+		right:0;
+		z-index:1;
+	    width:30px;
+		height:30px;
+		padding:15px;
+	}
+	.header .nav-menu span{
+		display:block;
+		width:30px;
+		height:5px;
+		margin:2px 0 5px;
+		background-color:#fff;
+	}
+	.footer{
+		height:auto;
+	}
+	.footer .title{
+		width: 25%;
+		height: 2.5em;
+		font-size: 1.8em;
+		line-height: 2.5em;
+	}
+	.footer .col-1{
+		float:none;
+		width:100%;
+		box-sizing:border-box;
+		padding:1em 5% 0;
+	}
+	.footer .col-1 .info{
+		width:100%;
+		padding:6em 0 1em;
+		margin-top:1em;
+	}
+	.footer .col-1 .tel{
+		padding-bottom:1em;	
+	}
+	.footer .col-1 .tel em{
+		font-size:1.3em;	
+	}
+	.footer .col-1 .tel span{
+		margin-top:0.5em;	
+	}
+	.footer .col-1 .copy{
+		line-height:2em;	
+	}
+	.footer .col-1 .copy p{
+		margin-bottom:1em;
+		line-height: 1.5em;	
+	}
+	
+	.footer .col-2{
+		float:none;
+		width:100%;
+		box-sizing:border-box;
+		padding:1em 5% 0;
+	}
+	.footer .col-2 strong{
+		margin:0 0 0.5em;	
+	}
+	.footer .col-2 ul li{
+		font-size:1.2em;
+		line-height:2em;	
+	}
+	.footer .col-3{
+		float:none;
+		width:100%;
+		box-sizing:border-box;
+		padding:1em 5% 0;
+	}
+	.footer .col-3 strong{
+		margin:0 0 0.5em;
+	}
+	.footer .col-3 p{
+		font-size:1.2em;
+		line-height:2em;
+		width:auto;	
+	}
+	.footer .col-3 span{
+		margin-top: 2.5em;
+	}
+	.footer .col-4{
+		float:none;
+		width:100%;
+		box-sizing:border-box;
+		padding:1em 5% 0;
+	}
+	.footer .col-4 strong{
+		height: 3.5em;
+		font-size: 1.8em;
+		line-height: 2em;
+		margin:0.5em 0 0;
+	}
+	
+}

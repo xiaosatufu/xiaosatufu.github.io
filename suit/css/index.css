@@ -1,0 +1,242 @@
+@charset "utf-8";
+/** index style **/
+.banner{
+	position:relative;
+	width:1920px;
+	height:auto;
+	margin:0 auto;
+	max-width:100%
+}
+.banner img{
+	width:100%;
+	height:auto;
+	display:block;
+}
+.banner .con{
+	position:absolute;
+	width:30%;
+	top:0;
+	left:20%;
+	color:#fff;
+	padding:100px 0 0 0;
+	z-index:1;
+}
+.banner .con h3{
+	font-family:Microsoft Yahei Light;
+	font-size:40px;
+	line-height:40px;
+}
+.banner .con p{
+	padding-top:15px;		
+}
+.parallax{
+	z-index:-1;	
+}
+.text-con{
+	padding:130px 10% 50px;
+	background-color:#e1e1e1;
+}
+.text-con h3{
+	font-family:Microsoft Yahei Light;
+	font-size:45px;
+	line-height:70px;
+	padding-bottom:40px;
+}
+.text-con p{
+	font-size:16px;
+	line-height:30px;
+}
+.img-con{
+	width:100%;
+	max-width:1920px;
+	height:auto;
+	margin:0 auto;
+}
+.img-con .thumb{
+	position:relative;
+	float:left;
+	width:33.33%;
+	height:auto;
+	overflow:hidden;	
+}
+.img-con .thumb img{
+	width:100%;
+	height:auto;	
+}
+.img-con .thumb .transparent{
+	-webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+	-ms-filter: blur(2px);    
+	filter: blur(2px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=2, MakeShadow=false);
+}
+.img-con .thumb .thumb-con{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	color:#fff;
+}
+.img-con .thumb .thumb-con h4{
+	font-size:40px;
+	line-height:45px;
+	margin:30% 0 0 15%;	
+}
+.img-con .thumb .thumb-con h4.mt{
+	margin:25% 0 0 15%;	
+}
+.img-con .thumb .thumb-con strong{
+	font-size:20px;
+	line-height:25px;
+	margin:0 0 0 15%;		
+}
+.img-con .thumb .thumb-con .show-hid{
+	width:70%;
+	margin:5% 0 0 15%;
+}
+.img-con .thumb .thumb-con .none{
+	display:none;	
+}
+.img-con .thumb .thumb-con .show-hid a{
+	display:block;
+	width:50%;
+	height:50px;
+	font-size:24px;
+	line-height:50px;
+	background-color:#C9641F;
+	text-align:center;
+	margin:10% auto 0;
+}
+.text-con2{
+	padding:100px 0 180px;
+	background-color:#e1e1e1;
+}
+.text-con2 dl{
+	float:left;
+	width:24%;
+	height:auto;
+	margin:0 13%;
+}
+.text-con2 dl dt{
+	font-family:Microsoft Yahei Light;
+	font-size:33px;
+	line-height:60px;
+	padding-bottom:20px;
+}
+.text-con2 dl dd{
+	font-size:16px;
+	line-height:30px;
+}
+/*适配平板*/
+@media (min-width: 640px) and (max-width: 1024px) {
+	.banner .con{
+		padding-top:60px;	
+	}
+	.text-con{
+		box-sizing:border-box;
+		padding:60px 5% 50px;
+	}
+	.text-con h3{
+		font-family:Microsoft Yahei Light;
+		font-size:3em;
+		line-height:2em;
+		padding-bottom:40px;
+	}
+	.text-con p{
+		font-size:1.2em;
+		line-height:2em;
+	}
+	.img-con .thumb .thumb-con h4{
+		font-size:3.5em;
+		line-height:1em;
+		margin:25% 0 0 15%;	
+	}
+	.img-con .thumb .thumb-con h4.mt{
+		margin:20% 0 0 15%;	
+	}
+	.img-con .thumb .thumb-con .show-hid a{
+		display:block;
+		width:70%;
+		height:50px;
+		font-size:1.6em;
+		line-height:50px;
+		background-color:#C9641F;
+		text-align:center;
+		margin:10% auto 0;
+	}
+	.text-con2 dl{
+		float:left;
+		width:30%;
+		height:auto;
+		margin:0 10%;
+	}
+	.text-con2 dl dt{
+		font-family:Microsoft Yahei Light;
+		font-size:2em;
+		line-height:3em;
+		padding-bottom:20px;
+	}
+	.text-con2 dl dd{
+		font-size:1.2em;
+		line-height:2em;
+	}	
+}
+/*适配手机横屏*/
+@media (min-width: 480px) and (max-width: 640px) {
+	
+}
+@media (min-width: 320px) and (max-width: 640px) {
+	.banner .con{
+		top:0;
+		left:0;
+		width:80%;
+		padding:1em 10%;
+	}
+	.banner .con h3{
+		font-size:2em;
+		line-height:1em;	
+	}
+	.banner .con p{
+		font-size:1em;
+		line-height:1.5em;
+		padding-top:1em;	
+	}
+	.text-con{
+		padding:3em 2em 2em;	
+	}
+	.text-con h3{
+		font-size:3em;
+		line-height:1.5em;
+		padding-bottom:1em;
+	}
+	.text-con p{
+		font-size:1.3em;
+		line-height:2em;	
+	}
+	.img-con .thumb{
+		float:none;
+		width:100%;
+		height:auto;	
+	}
+	.text-con2{
+		padding:2em 0;
+	}
+	.text-con2 dl{
+		float:none;
+		width:80%;
+		height:auto;
+		padding:0 10%;
+		margin:0;	
+	}
+	.text-con2 dl dt{
+		padding:0.5em 0;
+		font-size: 3em;
+    	line-height: 2em;
+	}
+	.text-con2 dl dd{
+		font-size:1.3em;
+		line-height:2em;	
+	}
+	
+}

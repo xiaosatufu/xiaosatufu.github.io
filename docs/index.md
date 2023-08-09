@@ -9,7 +9,7 @@ hero:
   tagline: The ending won't play with you.
   image:
     src: /tree-bro.png
-    alt: logo
+    alt: VitePress
   actions:
     - theme: brand
       text: 点击开始变强

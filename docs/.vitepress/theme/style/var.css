@@ -1,0 +1,83 @@
+:root {
+  /* 标题 */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient( 135deg, #F6CEEC 10%, #D939CD 100%);
+  
+  /* 图标背景 */
+  /* --vp-home-hero-image-background-image: linear-gradient( 135deg, #F6CEEC 10%, #D939CD 100%); */
+  --vp-home-hero-image-filter: blur(150px);
+
+  /* brand按钮 */
+  --vp-button-brand-border: #F6CEEC;
+  --vp-button-brand-text: #F6CEEC;
+  --vp-button-brand-bg: #D939CD;
+
+  --vp-button-brand-hover-border: #F6CEEC;
+  --vp-button-brand-hover-text: #fff;
+  --vp-button-brand-hover-bg: #D939CD;
+
+  --vp-button-brand-active-border: #F6CEEC;
+
+  /* 主题基色 */
+  --vp-c-brand: #D939CD;
+  --vp-c-brand-light: #D939CD;
+  --vp-c-brand-dark: #D939CD;
+}
+
+
+
+
+.image-bg {
+  
+  background-image: linear-gradient(
+
+  315deg,
+  rgb(210, 86, 53) 10%,
+  #647eff 50%,
+  rgb(238, 224, 112) 90%
+  ) !important; /* 背景渐变 */
+
+  background-size: 500% 500%; /* 背景大小 */
+  animation: gradientBG 5s ease infinite; /* 应用动画 */
+}
+
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+/* .image-bg {
+  background-image:linear-gradient(
+    315deg,
+    rgb(210, 86, 53) 10%,
+    #647eff 50%,
+    rgb(238, 224, 112) 90%
+  ) !important;
+  filter: blur(150px);
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+} */

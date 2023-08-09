@@ -1,1 +1,0 @@
-import{_ as e,v as t,b as a}from"./chunks/framework.f154aae1.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"articles/Pinna/index.md","filePath":"articles/Pinna/index.md"}'),n={name:"articles/Pinna/index.md"};function s(i,r,c,d,o,_){return t(),a("div")}const m=e(n,[["render",s]]);export{f as __pageData,m as default};

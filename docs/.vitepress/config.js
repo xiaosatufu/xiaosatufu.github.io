@@ -1,7 +1,7 @@
 export default {
   title: "K", // 博客的标题
   description: "111", // 博客的介绍
-  base: "/blog/", // 如果想用 https://mlyz.wdy.github.io/blog/ 访问，那么这句话必填
+  // base: "/blog/", // 如果想用 https://mlyz.wdy.github.io/blog/ 访问，那么这句话必填
   themeConfig: {
     logo: "/tree-bro.png", // 页面上显示的logo
     nav: [

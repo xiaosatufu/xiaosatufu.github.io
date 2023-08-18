@@ -52,19 +52,19 @@ export default {
           // 可以配置成下拉
           {
             text: "学习资料",
-            link: "/articles/Javascript/index.md",
+            link: "/articles/JavaScript/index.md",
           },
           {
             text: "工具函数",
-            link: "/articles/Javascript/utils.md",
+            link: "/articles/JavaScript/utils.md",
           },
           {
             text: "jquery",
-            link: "/articles/Javascript/jquery.md",
+            link: "/articles/JavaScript/jquery.md",
           },
           {
             text: "webSocket",
-            link: "/articles/Javascript/webSocket.md",
+            link: "/articles/JavaScript/webSocket.md",
           },
         ],
       },

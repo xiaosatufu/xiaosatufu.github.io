@@ -62,6 +62,10 @@ export default {
             text: "jquery",
             link: "/articles/Javascript/jquery.md",
           },
+          {
+            text: "webSocket",
+            link: "/articles/Javascript/webSocket.md",
+          },
         ],
       },
       {

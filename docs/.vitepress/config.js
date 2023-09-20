@@ -91,6 +91,7 @@ export default {
       { text: "Pinna", link: "/articles/Pinna/index.md" },
       { text: "Git", link: "/articles/Git/index.md" },
       { text: "Website", link: "/articles/Website/index.md" },
+      { text: "Linux", link: "/articles/Linux/index.md" },
       { text: "VsCode", link: "/articles/Vscode/index.md" },
       { text: "正则", link: "/articles/Reg/index.md" },
       { text: "乱炖", link: "/articles/乱炖/index.md" },

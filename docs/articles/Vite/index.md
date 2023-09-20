@@ -14,7 +14,7 @@ pnpm create vite
 
 ### 深度修改样式
 
-```
+```css
 :deep(.van-search) {
   flex: 1;
 }
@@ -24,24 +24,30 @@ pnpm create vite
 
 vite.config.js
 
-```
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+```js
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
   // 配置代理
-  server:{
-    proxy:{
+  server: {
+    proxy: {
       // https://i.maoyan.com
-      '/path':{
-        target:'https://i.maoyan.com',//替换的服务端地址
-        changeOrigin:true,//开启代理，允许跨域
-        rewrite:path=>path.replace(/^\/path/,'') // 设置重写的路径
-      }
-    }
-  }
-})
+      "/path": {
+        target: "https://i.maoyan.com", //替换的服务端地址
+        changeOrigin: true, //开启代理，允许跨域
+        rewrite: (path) => path.replace(/^\/path/, ""), // 设置重写的路径
+      },
+    },
+  },
+});
+```
 
+### 获取图片资源
+
+```js
+const getImageUrl = (icon) =>
+  new URL(`../assets/app-icon/${icon}`, import.meta.url).href;
 ```

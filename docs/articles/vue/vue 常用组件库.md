@@ -155,3 +155,76 @@ axios.interceptors.response.use(response=>{
 未完成的 ajax 被取消
 
 利用这个方法，一方面可以防止重复点击不同页码导致的表格数据闪烁，另外可以做实时搜索，始终获取最新结果。
+
+## vue-i18n
+
+使用
+
+1. npm install vue-i18n@next 或 yarn add vue-i18n@next
+2. 在 src 目录下新建 lang 并新建 index.js 文件
+   下面是 src/lang/index.js 代码
+
+```js
+import { createI18n } from "vue-i18n";
+export default createI18n({
+  legacy: false, // 让 setup 函数可以通过 t 访问
+  globalInjection: true, // 让 template 可以像 vue2 那样使用 $t 来访问
+  locale: "zh-cn",
+  fallbackLocale: "zh-cn",
+  messages: {
+    "zh-cn": {
+      index: {
+        title: "你好，vue-i18n",
+      },
+    },
+    "en-us": {
+      index: {
+        title: "Hello, Vue-i18n",
+      },
+    },
+  },
+});
+```
+
+3. 在入口文件 main.js 里引入进来
+
+```js
+import { createApp } from "vue";
+import App from "@/App.vue";
+import i18n from "@/lang/";
+const app = createApp(App);
+app
+  // ...
+  .use(i18n)
+  .mount("#app");
+export default app;
+```
+
+- setup() 和 template 如何进行访问多语言
+
+setup
+setup 可通过导入 t() 来访问
+
+template
+template 可通过旧版本写法即 $t() 来访问
+
+代码如下
+
+```html
+<template>
+  <h2>访问方式1：{{ title }}</h2>
+  <h2>访问方式2：{{ $t('index.title') }}</h2>
+</template>
+<script>
+  import { useI18n } from "vue-i18n";
+  export default {
+    setup() {
+      const { t } = useI18n();
+      const title = t("index.title");
+      return {
+        title,
+      };
+    },
+  };
+</script>
+```
